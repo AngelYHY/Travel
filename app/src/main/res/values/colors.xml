@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#52ADE7</color>
+    <color name="colorPrimaryDark">#099FDE</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--备份系统颜色由上到下：#3F51B5  #303F9F  #FF4081-->
+    <color name="gray">#e6e6e6</color>
+    <color name="darkgray">#cccc</color>
+    <color name="more_gray">#9A9A9A</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_white_apha">#80ffffff</color>
+    <color name="btn_press_color">#5677fc</color>
+    <color name="btn_pressed_color">#3ca0ec</color>
+    <color name="green">#8cbb19</color>
+    <color name="green_light">#11cd6e</color>
+
+    <color name="city_gray1">#706969</color>
+    <color name="black_less">#262626</color>
+
+    <color name="plan_look_blue">#52ADE7</color>
+    <color name="search_white">#ffffff</color>
+    <color name="colorYellow">#F69340</color>
+    <color name="white_apha">#80ffffff</color>
+
+    <drawable name="dra_white">#ffffff</drawable>
+    <drawable name="dra_white_apha">#80ffffff</drawable>
+
+
+    <array name="progress_colors_light">
+        <item>#FF03A9F4</item>
+        <item>#FFD8433C</item>
+        <item>#FFF2AF3A</item>
+        <item>#FF279B5E</item>
+    </array>
+
+    <array name="progress_colors_dark">
+        <item>#FF00E5FF</item>
+        <item>#ffd81d5a</item>
+        <item>#fff27512</item>
+        <item>#ff63bc34</item>
+    </array>
+
+    <array name="in_colors_light">
+        <item>#4B03A9F4</item>
+        <item>#3303A9F4</item>
+        <item>#1903A9F4</item>
+    </array>
+
+    <array name="in_colors_dark">
+        <item>#4B00E5FF</item>
+        <item>#3300E5FF</item>
+        <item>#1900E5FF</item>
+    </array>
+
+    <color name="colorAccentQuarter">#3300E5FF</color>
+    <color name="colorControlNormal">#FF78909C</color>
+    <color name="colorControlActivated">#FF03A9F4</color>
+    <color name="colorSwitchThumbNormal">#FF78909C</color>
+    <color name="colorPrimaryQuarter">#3303A9F4</color>
+    <color name="colorPrimaryHalf">#9003A9F4</color>
+    <color name="colorControlNormalHalf">#9078909C</color>
+    <color name="colorControlActivatedHalf">#9003A9F4</color>
+    <color name="colorAccentHalf">#9000E5FF</color>
+
+</resources>

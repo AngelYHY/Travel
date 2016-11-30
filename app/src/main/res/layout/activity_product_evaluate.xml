@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.purchase.ProductEvaluateActivity">
+    <LinearLayout
+        android:id="@+id/isevaluate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#EBEBEB">
+            <ImageView
+                android:id="@+id/productevaluate_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopback"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="累计评价"
+                android:textSize="18dp"
+                android:textColor="#563636"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/productevaluate_back"/>
+
+        </RelativeLayout>
+        <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+            android:id="@+id/lv_productevaluate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/product_evaluate_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="此商品还没有评价哦，快来购买，抢沙发吧！"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textColor="#4F4F4F"
+        android:textSize="17dp"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

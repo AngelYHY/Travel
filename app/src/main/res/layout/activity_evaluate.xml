@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EBEBEB">
+
+        <ImageView
+            android:id="@+id/evaluate_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/shopback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/evaluate_back"
+            android:text="评价宝贝"
+            android:textColor="#563636"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+        <ImageView
+            android:id="@+id/iv_evaluate"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/evaluate_product_name"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/iv_evaluate"
+            android:text="欧美男士长袖t恤"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tv_evaluate_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:text="67"
+            android:textColor="#242424"
+            android:textSize="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/tv_evaluate_price"
+            android:text="￥"
+            android:textSize="17dp" />
+
+        <TextView
+            android:id="@+id/tv_evaluate_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_evaluate_price"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="2"
+            android:textColor="#696969"
+            android:textSize="13dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_evaluate_price"
+            android:layout_marginTop="11dp"
+            android:layout_toLeftOf="@id/tv_evaluate_count"
+            android:text="X"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/evaluate_symbol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:text="元"
+            android:textColor="#3A3A3A"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/evaluate_all_moeny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/evaluate_symbol1"
+            android:text="134"
+            android:textColor="#3A3A3A"
+            android:textSize="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_toLeftOf="@id/evaluate_all_moeny"
+            android:text="合计："
+            android:textColor="#3A3A3A"
+            android:textSize="16dp" />
+
+
+    </RelativeLayout>
+
+    <View style="@style/line_10" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="105dp">
+
+        <EditText
+            android:id="@+id/et_evaluate"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="请留下您宝贵的评价！"
+            android:maxLength="150"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_10" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_input_evaluate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_pay"
+            android:text="发表评价"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</LinearLayout>

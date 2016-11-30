@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/recomm_green_good_32" android:state_selected="false"/>
+    <item android:drawable="@drawable/recomm_red_good_32" android:state_selected="true"/>
+
+</selector>

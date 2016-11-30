@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="statetype">
+        <item>全&#160;&#160;部</item>
+        <item>进行中 </item>
+        <item>已结束</item>
+    </string-array>
+
+</resources>

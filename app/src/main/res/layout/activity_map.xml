@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.administrator.firstpage.MapActivity">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/location_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_marginRight="100dp"
+            android:layout_marginBottom="35dp"
+            fab:fab_colorNormal="@color/darkgray"
+            android:onClick="locateMyPosition"
+            fab:fab_colorPressed="@color/more_gray"
+            fab:fab_icon="@mipmap/nav_turn_via_1"
+            fab:fab_size="mini"/>
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/isevaluate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#EBEBEB">
+
+            <ImageView
+                android:id="@+id/isevaluate_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"
+                android:src="@drawable/shopback" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/isevaluate_back"
+                android:text="待评价订单"
+                android:textColor="#563636"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_isevaluate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/isevaluate_null"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="暂时还没有待评价订单哦！"
+        android:textColor="#4F4F4F"
+        android:textSize="17dp"
+        android:visibility="gone" />
+</RelativeLayout>

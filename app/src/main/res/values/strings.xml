@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">旅城</string>
+    <string name="testInfo">你的思念过非法阿什顿时的很费劲的说的交话费
+                SD卡根据阿里山的哭给你的了罚款结果的了罚款根据的反馈结果你的思念过非法阿什顿时的很费劲的说的交话费
+                SD卡根据阿里山的哭给你的了罚款思念过非法阿什顿时的很费劲的说的交话费
+                SD卡根据阿里山的哭给你的了罚款结果的了罚款根据的反馈结果你的思念过非法阿什顿时的很费劲的说的交话费</string>
+    <string name="jion_plan">已添加到计划</string>
+    <string name="jion_plan_look">去看看></string>
+    <string name="first_fresh">每天10:00准时刷新</string>
+    <string name="content">看了最后一行代码可能有人会问？ImageView （点击展开更多）是
+        否应该显示 的判断逻辑为什么要放在post方法里边呢？ 这是由于在OnCreate方法中定义设
+        置的textView不会马上渲染并显示，所以textview的getLineCount()
+        获取到的值一般都为零，因此使用post会在其绘制完成后来对ImageView进行显示控制。</string>
+    <string name="rel_say_content">
+        事虽小，勿擅为，苟擅为，子道亏；物虽小，勿私藏，苟私藏，亲心伤；
+    </string>
+    <string name="recomm_reason">
+        [英文字母陶瓷冰箱贴 家具饰品]之前卖了这个字母磁铁打算吸附在冰箱门上的。后来发现它的作用还真是很多。过年的时候熊孩子，就喜欢拿着他们拼成各种单词，活生生的幼教工具了。字母的图案挺好玩的，也非常可爱。
+    </string>
+    <string name="city_suzhou1">古色古香的园林，平江路、观前街、山塘街一条条老街，漫步苏州，或看水乡居民日常起居，或品尝美食，或扎入琳琅满目的小店带来的繁华中，各有各的不同，各有各的好。</string>
+    <string name="city_suzhou2">苏州园林中最具代表性的为拙政园，被胜誉为“天下园林之母”。拙政园面积很大，游览一圈约需2-3小时，到景点前会有很多黑导游要你跟他的团，不要去听他们的就是了。拙政园外面有许多卖丝绸、扇子的小摊贩，一定要砍价，货比三家！</string>
+    <string name="city_suzhou3">游玩时间：建议2-3小时;门票价格：￥20</string>
+    <string name="city_suzhou4">开放时间：3月1日-11月15日7:30-17:30，11月16日-次年2月底7:30-17:00。</string>
+
+</resources>

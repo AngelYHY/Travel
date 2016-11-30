@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#F6F6F6"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#FCFCFC">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="买家已付款"
+                android:textColor="#FC4132" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <ImageView
+                android:id="@+id/iv_isreceive"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/isreceive_product_name"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@id/iv_isreceive"
+                android:text="欧美男士长袖t恤"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/tv_isreceive_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="67"
+                android:textColor="#242424"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@id/tv_isreceive_price"
+                android:text="￥"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tv_isreceive_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/tv_isreceive_price"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:text="2"
+                android:textColor="#696969"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_isreceive_price"
+                android:layout_marginTop="11dp"
+                android:layout_toLeftOf="@id/tv_isreceive_count"
+                android:text="X"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/isreceive_isback_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="10dp"
+                android:text="2016-08-26 14:51:00"
+                android:textColor="#6E6E6E" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_toLeftOf="@id/isreceive_isback_time"
+                android:text="发货时间：" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/isreceive_heji_symbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="合计：" />
+
+            <TextView
+                android:id="@+id/isreceive_all_moeny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/isreceive_heji_symbol"
+                android:text="134"
+                android:textColor="#FF5959"
+                android:textSize="17dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/isreceive_all_moeny"
+                android:text="元"
+                android:textColor="#FF5959"
+                android:textSize="17dp" />
+            <Button
+                android:id="@+id/btn_isreceive"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:text="确认收货"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_pay"
+                android:textColor="#ffffff"
+                android:layout_marginRight="10dp"/>
+
+            <Button
+                android:id="@+id/btn_isreceive_logistics"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/search_edit_text_shape"
+                android:text="查看物流"
+                android:layout_toLeftOf="@id/btn_isreceive"/>
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+
+

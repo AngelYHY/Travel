@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--pressed状态，颜色：绿色-->
+    <item android:state_pressed="true" android:drawable="@drawable/green"></item>
+    <!--其他状态，都不满足的情况下，用这种默认样式-->
+    <item android:drawable="@drawable/red"/>
+
+</selector>

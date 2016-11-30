@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:layout_margin="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/myrelease_img"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/myrel_content"
+                android:layout_toRightOf="@id/myrelease_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/content"
+                android:maxLines="5"
+                android:lineSpacingExtra="3dp"
+                android:padding="5dp"
+                android:ellipsize="end"/>
+            <TextView
+                android:id="@+id/myrel_time"
+                android:layout_below="@id/myrel_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2016-8-23 12:12"
+                android:padding="10dp" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

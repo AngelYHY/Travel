@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+        android:id="@+id/rel_load_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkgray">
+
+    </com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/rel_comment_layoutid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="@drawable/shape_say_layout"
+            android:paddingTop="7dp"
+            android:paddingRight="10dp">
+
+            <Button
+                android:id="@+id/rel_send_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送"
+                android:textColor="@color/color_white"
+                android:background="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="5dp"/>
+
+            <EditText
+                android:id="@+id/rel_comment_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/rel_send_btn"
+                android:hint="回复:"
+                android:textSize="18sp"
+                android:paddingTop="10dp"
+                android:paddingLeft="5dp"
+                android:paddingBottom="25dp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/rel_view"
+            android:layout_above="@id/rel_comment_layoutid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+</RelativeLayout>

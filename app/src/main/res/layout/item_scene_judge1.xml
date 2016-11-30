@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <ImageView
+            android:id="@+id/judge_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/item_scene_judge_head_200"/>
+        <TextView
+            android:id="@+id/judge_name"
+            android:layout_toRightOf="@id/judge_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:paddingLeft="8dp"/>
+        <TextView
+            android:id="@+id/scene_judge_time"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016-9-1 12:20"
+            android:layout_marginRight="5dp"/>
+        <!--isIndicator="true"设为不可点击，StyleSmall大小为最小-->
+        <RatingBar
+            android:id="@+id/judge_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/judge_head"
+            android:layout_below="@id/judge_name"
+            android:layout_margin="8dp"
+            android:numStars="5"
+            android:max="255"
+            style="?android:attr/ratingBarStyleSmall"
+            android:progress="255"
+            android:stepSize="0.5"
+            android:isIndicator="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/judge_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:text="@string/content"
+        android:lineSpacingExtra="3dp"
+        android:ellipsize="end"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:scrollbars="none">
+        <views.CustomLinearlayout
+            android:id="@+id/custom_linear"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="horizontal">
+
+        </views.CustomLinearlayout>
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="match_parent">-->
+            <!--&lt;!&ndash;自定义spacingWidthUniform&ndash;&gt;-->
+            <!--<views.CustomGridView-->
+                <!--android:id="@+id/judge_cus_viewpager"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="120dp"-->
+                <!--android:gravity="center"-->
+                <!--android:numColumns="auto_fit"-->
+                <!--android:stretchMode="spacingWidthUniform">-->
+            <!--</views.CustomGridView>-->
+        <!--</LinearLayout>-->
+    </HorizontalScrollView>
+
+
+
+</LinearLayout>

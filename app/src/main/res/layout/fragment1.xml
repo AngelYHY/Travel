@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/search1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#59B4EE">
+        <LinearLayout
+            android:id="@+id/locate_first_page1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="start|center_vertical">
+            <TextView
+                android:id="@+id/tv_city1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="上海"
+                android:layout_gravity="center_vertical"
+                android:textSize="16sp"
+                android:padding="11dp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/search_tv_fragment1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@mipmap/search_32"
+                android:background="@drawable/search_edit_text_shape"
+                android:textSize="16sp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:hint="请输入城市或景点"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyler_fragment"
+        android:layout_below="@id/search1">
+
+    </com.wuxiaolong.pullloadmorerecyclerview.PullLoadMoreRecyclerView>
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/recyler_fragment"
+        android:layout_below="@id/search1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>-->
+</RelativeLayout>

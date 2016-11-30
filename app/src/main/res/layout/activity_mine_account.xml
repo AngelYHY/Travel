@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ecf0f1"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/mine_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/mine_account_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/shopback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/mine_account_back"
+            android:text="个人资料"
+            android:textColor="#563636"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/save_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:text="保存"
+            android:textColor="@color/colorYellow"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <View
+        style="@style/line_1"
+        android:layout_below="@id/mine_account_layout" />
+
+    <RelativeLayout
+        android:id="@+id/person_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="头像" />
+
+        <ImageView
+            android:id="@+id/img_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/person_go_gray_32" />
+
+        <ImageView
+            android:id="@+id/person_headimg"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/img_go"
+            android:src="@drawable/person_head_gray_40" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="昵称" />
+
+        <TextView
+            android:id="@+id/person_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:focusable="true"
+            android:padding="6dp"
+            android:text="不可编辑"
+            android:textColor="#a9b7b7"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_phone_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="手机号" />
+
+        <TextView
+            android:id="@+id/person_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@null"
+            android:focusable="true"
+            android:padding="6dp"
+            android:text="不可编辑"
+            android:textColor="#a9b7b7"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_sex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="性别" />
+
+        <ImageView
+            android:id="@+id/img_go3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/person_go_gray_32" />
+
+        <TextView
+            android:id="@+id/person_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/img_go3"
+            android:padding="6dp"
+            android:text="请选择"
+            android:textColor="#a9b7b7" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/person_birth_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="年龄" />
+
+        <ImageView
+            android:id="@+id/img_go4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="3dp"
+            android:src="@drawable/person_go_gray_32" />
+
+        <EditText
+            android:id="@+id/person_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/img_go4"
+            android:focusable="true"
+            android:padding="6dp"
+            android:text="0"
+            android:textColor="#a9b7b7" />
+    </RelativeLayout>
+</LinearLayout>

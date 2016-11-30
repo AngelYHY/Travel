@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:more="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/judge_head2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/item_scene_judge_head_200"/>
+        <TextView
+            android:id="@+id/judge_name2"
+            android:layout_toRightOf="@id/judge_head2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名"
+            android:paddingLeft="8dp"/>
+        <!--isIndicator="true"设为不可点击，StyleSmall大小为最小-->
+        <RatingBar
+            android:id="@+id/judge_rating2"
+            android:layout_width="82dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/judge_head2"
+            android:layout_below="@id/judge_name2"
+            android:layout_margin="8dp"
+            android:numStars="5"
+            android:max="255"
+            style="?android:attr/ratingBarStyleSmall"
+            android:progress="255"
+            android:stepSize="0.5"
+            android:isIndicator="true"/>
+    </RelativeLayout>
+
+    <views.MoreTextView
+        android:id="@+id/judge_content2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        more:textColor="@android:color/black"
+        more:textSize="18dip"
+        more:maxLine="3"
+        more:text="@string/content"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp">
+            <!--自定义spacingWidthUniform-->
+            <views.CustomGridView
+                android:id="@+id/judge_cus_gridview2"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="spacingWidthUniform">
+            </views.CustomGridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recomm_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/imglayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/recomm_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/system_wrong"/>
+        <ImageView
+            android:id="@+id/recomm_touxiang"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/wrong_img"
+            android:layout_margin="5dp"/>
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/recomm_reason_tv"
+        android:layout_below="@id/imglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:lineSpacingExtra="2dp"
+        android:textSize="15sp"
+        android:ellipsize="end"
+        android:textColor="@color/more_gray"
+        android:text="@string/recomm_reason"/>
+</RelativeLayout>

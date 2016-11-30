@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <ImageButton
+        android:id="@+id/back_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:src="@drawable/actionbar_back_white_32" />
+    <TextView
+        android:id="@+id/custom_bar_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="我的发布"
+        android:textSize="18sp"
+        android:padding="5dp"
+        android:textColor="#fff"/>
+    <TextView
+        android:id="@+id/tv_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="发布"
+        android:textSize="16sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:textColor="@drawable/textcolor_white" />
+
+</RelativeLayout>

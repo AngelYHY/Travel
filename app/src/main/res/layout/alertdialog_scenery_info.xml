@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="2"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/dialog_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="5dp">
+
+                        <ImageView
+                            android:id="@+id/img_gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/dialog_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="苏州博物馆"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:textSize="20sp"
+                            android:singleLine="true" />
+                        <TextView
+                            android:id="@+id/dialog_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="周二-周日"
+                            android:textSize="15sp"
+                            android:autoLink="phone"
+                            android:layout_below="@id/dialog_name"
+                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/dialog_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/testInfo"
+                    android:textSize="15sp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/dialog_jion_plan"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="加入计划"
+            android:background="@drawable/dailog_tv_left"
+            android:onClick="jionPlan"/>
+        <TextView
+            android:id="@+id/dialog_more_info"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:padding="15dp"
+            android:gravity="center"
+            android:text="景点详情"
+            android:background="@drawable/dailog_tv_right"
+            android:onClick="jionPlan"/>
+    </LinearLayout>
+</LinearLayout>

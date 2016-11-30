@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/xiaobai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小白:15659099657"
+        android:background="#ffffff"
+        android:textSize="17dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@null"/>
+    <Button
+        android:id="@+id/xiaocheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小程:18352863226"
+        android:background="#ffffff"
+        android:textSize="17dp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@null"/>
+    <Button
+        android:id="@+id/xiaofa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="小法:13024526541"
+        android:background="#ffffff"
+        android:textSize="17dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@null"/>
+    <Button
+        android:id="@+id/phone_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="取消"
+        android:background="#ffffff"
+        android:textSize="17dp"
+        android:textColor="#FF3535"/>
+
+
+</LinearLayout>

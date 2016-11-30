@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--搜索，取消-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape">
+        <FrameLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/search_scenery_et_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@mipmap/search_32"
+                android:background="@drawable/search_edit_text_shape"
+                android:textSize="16sp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:hint="请输入城市或景点"/>
+            <ImageView
+                android:id="@+id/search_scenery_iv_delete"
+                android:visibility="gone"
+                android:layout_marginRight="20dp"
+                android:src="@mipmap/delete_32"
+                android:layout_gravity="end|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/search_scenery_tv_back"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:text="取消"
+            android:gravity="center"
+            android:layout_gravity="end|center_vertical"
+            android:textColor="#A5D8F5"
+            android:textSize="20sp"/>
+    </LinearLayout>
+
+    <!--自动补全的ListView-->
+    <ListView
+        android:id="@+id/search_scenery_lv_auto"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+    </ListView>
+</LinearLayout>

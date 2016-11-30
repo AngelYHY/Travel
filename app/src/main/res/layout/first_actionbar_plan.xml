@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:id="@+id/planbar_img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/back_white2"/>
+    <TextView
+        android:id="@+id/tv_hitory"
+        android:drawableTop="@mipmap/history_white_32"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="历史"
+        android:textColor="@color/color_white"/>
+    <TextView
+        android:id="@+id/tv_plan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="计划行程"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#F6F6F6"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="#FCFCFC">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="等待买家付款"
+            android:textColor="#FC4132"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="130dp">
+    <ImageView
+        android:id="@+id/iv_ispay"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/ispay_product_name"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_ispay"
+        android:text="欧美男士长袖t恤"
+        android:layout_marginTop="20dp"
+        android:textSize="14dp"
+        android:layout_marginLeft="5dp"/>
+
+       <TextView
+           android:id="@+id/tv_ispay_price"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="67"
+           android:layout_alignParentRight="true"
+           android:textSize="15dp"
+           android:layout_marginTop="20dp"
+           android:layout_marginRight="10dp"
+           android:textColor="#242424"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_ispay_price"
+            android:text="￥"
+            android:layout_marginTop="20dp"
+            android:textSize="17dp"/>
+    <TextView
+        android:id="@+id/tv_ispay_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ispay_price"
+        android:text="2"
+        android:textColor="#696969"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textSize="13dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/tv_ispay_count"
+        android:text="X"
+        android:layout_below="@id/tv_ispay_price"
+        android:textSize="12dp"
+        android:layout_marginTop="11dp"/>
+<TextView
+    android:id="@+id/ispay_order_time"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2016-08-26 14:51:00"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="10dp"
+    android:layout_marginRight="10dp"
+    android:textColor="#6E6E6E"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/ispay_order_time"
+        android:text="订单时间："
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/ispay_heji_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="合计："
+            android:layout_marginLeft="10dp"/>
+        <TextView
+            android:id="@+id/ispay_all_moeny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ispay_heji_symbol"
+            android:text="134"
+            android:textColor="#FF5959"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="元"
+            android:textColor="#FF5959"
+            android:layout_centerVertical="true"
+            android:textSize="17dp"
+            android:layout_toRightOf="@id/ispay_all_moeny"/>
+        <Button
+            android:id="@+id/btn_ispay_pay"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="付款"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_pay"
+            android:textColor="#ffffff"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/ispay_delete_order"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/search_edit_text_shape"
+            android:text="取消订单"
+            android:layout_toLeftOf="@id/btn_ispay_pay"
+            android:layout_marginRight="8dp"/>
+
+
+        <Button
+            android:id="@+id/btn_ispay_contact_seller"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:text="联系卖家"
+            android:background="@drawable/search_edit_text_shape"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@id/ispay_delete_order"/>
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>
+</android.support.v7.widget.CardView>

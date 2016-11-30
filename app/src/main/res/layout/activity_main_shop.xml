@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerlayoutcity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/gouwudetoubu"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/shop_product_city_relative"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/shopcityname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="苏州"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_toRightOf="@id/shopcityname"
+                        android:src="@drawable/xiangxiajiantou2"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/gouwuzhegezi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="购物"
+                    android:textColor="#ff0000"
+                    android:textSize="20sp"/>
+
+                <ImageView
+                    android:id="@+id/shoppingcart_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="12dp"
+                    android:src="@drawable/gouwuche2"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/gouwudetoubu"
+                android:background="#D4D4D4"/>
+
+
+            <com.example.wo.travelt.widget.SuperRadioGroup
+                android:id="@+id/group"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/gouwudetoubu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="2dp">
+
+                <RadioButton
+                    android:id="@+id/home"
+                    style="@style/main_tab_bottom"
+                    android:checked="true"
+                    android:text="今日特惠"
+                    />
+
+                <RadioButton
+                    android:id="@+id/newscenter"
+                    style="@style/main_tab_bottom"
+                    android:text="旅城纪念品"
+                    />
+
+                <RadioButton
+                    android:id="@+id/govaffairs"
+                    style="@style/main_tab_bottom"
+                    android:text="文化产品"
+                    />
+
+                <RadioButton
+                    android:id="@+id/settings"
+                    style="@style/main_tab_bottom"
+                    android:text="美食特产"
+                    />
+            </com.example.wo.travelt.widget.SuperRadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/group"
+                android:background="#D4D4D4"/>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/group"/>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lv_drawlayout_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/drawlayoutbackground"
+            android:divider="@null">
+
+        </ListView>
+
+    </android.support.v4.widget.DrawerLayout>
+</RelativeLayout>
+
+

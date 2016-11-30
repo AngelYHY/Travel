@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.purchase.ChooseAddressActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#EBEBEB">
+            <ImageView
+                android:id="@+id/choose_address_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shopback"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:padding="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择收货地址"
+                android:textSize="18dp"
+                android:textColor="#563636"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/choose_address_back"/>
+            <TextView
+                android:id="@+id/choose_address_admin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="管理"
+                android:layout_centerVertical="true"
+                android:textColor="#563636"
+                android:padding="15dp"
+                android:textSize="17dp"/>
+        </RelativeLayout>
+    <ListView
+        android:id="@+id/lv_choose_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
+
+
+
+    </LinearLayout>
+</RelativeLayout>

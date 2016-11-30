@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_tosay"
+    android:layout_marginTop="5dp">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:layout_width="50dp"
+        android:layout_height="50dp" />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_toRightOf="@id/img_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="木木木森"
+        android:textColor="#8a8a8a"/>
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="08-17"
+        android:layout_alignParentRight="true"
+        android:textSize="14dp"/>
+    <TextView
+        android:id="@+id/tv_pname"
+        android:layout_below="@id/tv_name"
+        android:layout_toRightOf="@id/img_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:paddingBottom="20dp"
+        android:text="回复 木木木森："
+        android:textColor="@color/more_gray"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_below="@id/tv_pname"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_toRightOf="@id/img_head"
+        android:textColor="#515151"/>
+</RelativeLayout>

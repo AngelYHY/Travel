@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/showbar_img_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="20dp"
+        android:src="@mipmap/back_white2"/>
+
+    <ImageView
+        android:id="@+id/showbar_share"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="10dp"
+        android:src="@mipmap/showplan_share_yellow_32"/>
+    <ImageView
+        android:id="@+id/showbar_alert"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/showbar_share"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@mipmap/showplan_alert_yellow_31"
+        />
+    <TextView
+        android:id="@+id/showbar_tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="行程"
+        android:textColor="@color/color_white"
+        android:textSize="18sp"/>
+</RelativeLayout>

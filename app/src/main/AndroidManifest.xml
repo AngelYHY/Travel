@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wo.travelt">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 拨打电话，联系客服的权限 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- 网络权限、写入外存权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 系统日历权限 -->
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <!-- 相机 -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 蓝牙分享所需的权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/lvchenglogin"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.ShoujizhuceActivity" />
+        <activity android:name=".ui.activity.ZhaomimaActivity" />
+        <activity android:name=".ui.activity.EvaluateActivity"/>
+        <activity android:name=".ui.activity.IsBackProductActivity"/>
+        <activity android:name=".ui.activity.IsEvaluateActivity"/>
+        <activity android:name=".ui.activity.IspayActivity"/>
+        <activity android:name=".ui.activity.IsReceiveActivity"/>
+        <activity android:name=".ui.activity.MineAboutActivity"/>
+        <activity android:name=".ui.activity.MineAccountActivity"/>
+        <activity android:name=".ui.activity.MineNewAddressActivity"/>
+        <activity android:name=".ui.activity.MineReceiptAddressActivity"/>
+        <activity android:name=".ui.activity.MineReleaseActivity"/>
+        <activity android:name=".ui.activity.MyOrderActivity"/>
+        <activity android:name=".ui.activity.XiugaimimaActivity"/>
+        <activity android:name=".ui.activity.SettingActivity"/>
+        <activity android:name=".ui.activity.MineUpdateAddressActivity"/>
+
+
+    </application>
+
+</manifest>

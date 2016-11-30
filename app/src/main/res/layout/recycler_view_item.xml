@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#ffffff"
+    app:cardCornerRadius="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/product_r1"
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <ImageView
+            android:id="@+id/product_picture"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
+        <RelativeLayout
+            android:id="@+id/product_r2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/product_picture">
+
+            <TextView
+                android:id="@+id/product_pricefuhao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="#FF0000"
+                android:textSize="15sp"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/product_pricefuhao"
+                android:text="50"
+                android:textColor="#FF0000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_priceyuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/product_price"
+                android:text="元"
+                android:textColor="#FF0000"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/productStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="商品库存"
+
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/productStock"
+                android:text="库存:"
+
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="5dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/product_price"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_price"
+                    android:singleLine="true"
+                    android:text="商品的简介"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
+
+
+
+

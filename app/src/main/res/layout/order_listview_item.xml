@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#faf6f6">
+
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:text="2016-07-12  14:20"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:id="@+id/orderdate"
+        android:layout_marginTop="39dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imageView" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="已关闭"
+        android:gravity="right"
+        android:textColor="#000000"
+        android:id="@+id/guanbi"
+        android:layout_above="@+id/imageView"
+        android:layout_alignEnd="@+id/gojudge" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/imageView"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/orderdate"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp" />
+
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:text="New Text"
+        android:singleLine="true"
+        android:textColor="#000000"
+        android:id="@+id/from"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/imageView" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="数量"
+        android:gravity="right"
+        android:textColor="#000000"
+        android:id="@+id/shuliang"
+        android:layout_marginRight="30dp"
+        android:layout_alignBottom="@+id/from"
+        android:layout_toEndOf="@+id/from" />
+
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="7天退货"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:background="#FFF70505"
+        android:id="@+id/tuihuo"
+        android:layout_below="@+id/from"
+        android:layout_alignStart="@+id/from" />
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="总金额:  66.60"
+        android:textColor="#000000"
+        android:gravity="left"
+        android:id="@+id/total"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginTop="37dp" />
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="去评价"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:id="@+id/gojudge"
+        android:layout_alignTop="@+id/total"
+        android:layout_alignEnd="@+id/shuliang" />
+
+    <TextView
+        android:layout_width= "40dp"
+        android:layout_height="30dp"
+        android:text="x 1"
+        android:id="@+id/geshu"
+        android:textColor="#000000"
+        android:gravity="right"
+        android:layout_below="@+id/shuliang"
+        android:layout_alignEnd="@+id/gojudge" />
+
+
+</RelativeLayout>

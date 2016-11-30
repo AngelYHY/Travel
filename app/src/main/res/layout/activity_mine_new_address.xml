@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#EBEBEB">
+
+        <ImageView
+            android:id="@+id/mine_new_address_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:src="@drawable/shopback" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/mine_new_address_back"
+            android:text="添加新地址"
+            android:textColor="#563636"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/save_new_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:text="保存"
+            android:textColor="#EC3C28"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/new_address_symbol1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="收货人："
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_new_address_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/new_address_symbol1"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/new_address_symbol2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="联系电话："
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_new_address_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/new_address_symbol2"
+            android:background="@null"
+            android:phoneNumber="true" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/new_address_symbol3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="所在省："
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_new_address_province"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/new_address_symbol3"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/new_address_symbol4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="所在市："
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/et_new_address_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/new_address_symbol4"
+            android:background="@null" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <EditText
+            android:id="@+id/et_new_address_detailed_addr"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:hint="详细地址"
+            android:maxLength="50"
+            android:textSize="14dp" />
+
+    </RelativeLayout>
+
+    <View style="@style/line_7" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <TextView
+            android:id="@+id/new_address_symbol5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="设为默认地址："
+            android:textSize="14dp" />
+
+        <CheckBox
+            android:id="@+id/cb_new_address_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FDF8EE"/>
+
+</LinearLayout>
