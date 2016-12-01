@@ -27,8 +27,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.MedicalSystem.R;
 import com.android.library.widget.progress.CircularProgressBar;
+import com.example.wo.travelt.R;
 
 public class LoadMoreListView extends ListView implements OnScrollListener {
 

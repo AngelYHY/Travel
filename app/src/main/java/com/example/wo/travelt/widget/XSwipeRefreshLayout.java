@@ -1,12 +1,10 @@
 package com.example.wo.travelt.widget;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.AttributeSet;
 
-import com.android.MedicalSystem.R;
-import com.android.library.widget.recyclerview.DividerItemDecoration;
+import com.example.wo.travelt.R;
 
 /**
  * Author:  ljo_h

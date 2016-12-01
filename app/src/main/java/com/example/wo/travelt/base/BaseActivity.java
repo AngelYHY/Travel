@@ -10,7 +10,6 @@ import com.android.library.base.IView;
 import com.android.library.util.netstatu.NetUtils;
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.injector.component.ActivityComponent;
-import com.example.wo.travelt.injector.component.DaggerActivityComponent;
 import com.example.wo.travelt.injector.module.ActivityModule;
 import com.example.wo.travelt.widget.EmptyView;
 import com.example.wo.travelt.widget.MyToast;

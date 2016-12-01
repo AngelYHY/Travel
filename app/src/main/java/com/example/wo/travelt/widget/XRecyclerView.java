@@ -2,13 +2,12 @@ package com.example.wo.travelt.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.renderscript.Type;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 
-import com.android.MedicalSystem.R;
 import com.android.library.widget.recyclerview.DividerItemDecoration;
+import com.example.wo.travelt.R;
 
 /**
  * Author:  ljo_h

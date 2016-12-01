@@ -12,6 +12,7 @@ import com.android.library.base.IView;
 import com.android.library.base.baseAdapter.BaseAppCompatFragment;
 import com.android.library.util.netstatu.NetUtils;
 import com.example.wo.travelt.R;
+import com.example.wo.travelt.injector.component.DaggerFragmentComponent;
 import com.example.wo.travelt.injector.component.FragmentComponent;
 import com.example.wo.travelt.injector.module.FragmentModule;
 import com.example.wo.travelt.widget.EmptyView;

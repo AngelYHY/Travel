@@ -5,9 +5,9 @@ import com.example.wo.travelt.base.BaseFragment;
 /**
  * Created by Administrator on 2016/11/30 0030.
  */
-public class Fragment1 extends BaseFragment{
+public class Fragment2Shop extends BaseFragment {
 
-    public Fragment1() {
+    public Fragment2Shop() {
     }
 
     @Override
@@ -19,5 +19,4 @@ public class Fragment1 extends BaseFragment{
     protected int getContentViewLayoutID() {
         return 0;
     }
-
 }

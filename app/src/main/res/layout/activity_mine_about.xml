@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#EBEBEB">
-
-        <ImageView
-            android:id="@+id/mine_about_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:padding="10dp"
-            android:src="@drawable/shopback" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/mine_about_back"
-            android:text="关于旅城"
-            android:textColor="#563636"
-            android:textSize="18dp" />
-
-    </RelativeLayout>
+    <include layout="@layout/toolbar"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -44,7 +22,8 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
-                android:foregroundGravity="center" />
+                android:foregroundGravity="center"
+                android:src="@drawable/logo"/>
 
             <TextView
                 android:id="@+id/about_us_show"
@@ -52,7 +31,8 @@
                 android:layout_height="100dp"
                 android:layout_below="@id/logo_picture"
                 android:layout_marginTop="20dp"
-                android:textSize="20dp" />
+                android:text="旅城是业内领先的旅游app，专注服务更广泛群体的旅游所需，以为用户提供优质的导游服务为宗旨，潜心用户体验研究，致力于成为旅游app的领导者"
+                android:textSize="20dp"/>
 
             <TextView
                 android:id="@+id/title_one"
@@ -60,22 +40,23 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/about_us_show"
                 android:gravity="center"
-                android:textSize="25dp" />
+                android:text="做最精致的导游"
+                android:textSize="25dp"/>
 
             <TextView
                 android:id="@+id/context_one"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_below="@id/title_one"
-                android:textSize="20dp" />
+                android:text="所有提供的景点和路线都是最新的，为你介绍最值得的旅行和最便捷的出行方式，只有经过对比的方案才会为你推荐"
+                android:textSize="20dp"/>
 
             <ImageView
                 android:id="@+id/context_one_pic"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_below="@id/context_one"
-
-                />
+                android:src="@drawable/scene"/>
 
             <TextView
                 android:id="@+id/title_two"
@@ -83,14 +64,16 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/context_one_pic"
                 android:gravity="center"
-                android:textSize="25dp" />
+                android:text="金牌贴心客服"
+                android:textSize="25dp"/>
 
             <TextView
                 android:id="@+id/context_two"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_below="@id/title_two"
-                android:textSize="20dp" />
+                android:text="全信息化的客服中心，专业贴心的客服时刻守候着，至真至诚，我们旅城人的每一个微笑，都是为你奉献"
+                android:textSize="20dp"/>
 
             <ImageView
                 android:id="@+id/context_two_pic"
@@ -98,7 +81,7 @@
                 android:layout_height="150dp"
                 android:layout_below="@id/context_two"
                 android:layout_weight="1"
-                android:background="@drawable/shop_kefu" />
+                android:background="@drawable/shop_kefu"/>
 
             <ImageView
                 android:id="@+id/context_two_pic2"
@@ -107,7 +90,7 @@
                 android:layout_below="@id/context_two"
                 android:layout_toRightOf="@id/context_two_pic"
                 android:layout_weight="1"
-                android:background="@drawable/kefu2" />
+                android:background="@drawable/kefu2"/>
 
             <TextView
                 android:id="@+id/title_three"
@@ -115,22 +98,23 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/context_two_pic2"
                 android:gravity="center"
-                android:textSize="25dp" />
+                android:text="100%人工质检"
+                android:textSize="25dp"/>
 
             <TextView
                 android:id="@+id/context_three"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_below="@id/title_three"
-                android:textSize="20dp" />
+                android:text="所有商品都需先邮寄样品入库，职业验货师再对商品的包装，材质，细节，工艺等进行%100全检，只有通过质检合格的产品才会与买家相见"
+                android:textSize="20dp"/>
 
             <ImageView
                 android:id="@+id/context_three_pic"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_below="@id/context_three"
-
-                />
+                android:src="@drawable/check"/>
 
             <TextView
                 android:id="@+id/title_four"
@@ -138,14 +122,16 @@
                 android:layout_height="50dp"
                 android:layout_below="@id/context_three_pic"
                 android:gravity="center"
-                android:textSize="25dp" />
+                android:text="轻松购好货"
+                android:textSize="25dp"/>
 
             <TextView
                 android:id="@+id/context_four"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:layout_below="@id/title_four"
-                android:textSize="20dp" />
+                android:text="精挑细选的品牌好货，风格独特的纪念品，美味价廉的食品，为您创造一个完美的购物体验"
+                android:textSize="20dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -157,28 +143,32 @@
                     android:id="@+id/context_four_pic"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/food"/>
 
                 <ImageView
                     android:id="@+id/context_four_pic2"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_toRightOf="@id/context_four_pic"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/culture"/>
 
                 <ImageView
                     android:id="@+id/context_four_pic3"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_toRightOf="@id/context_four_pic2"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/gaodian"/>
 
                 <ImageView
                     android:id="@+id/context_four_pic4"
                     android:layout_width="0dp"
                     android:layout_height="150dp"
                     android:layout_toRightOf="@id/context_four_pic3"
-                    android:layout_weight="1" />
+                    android:layout_weight="1"
+                    android:src="@drawable/goods"/>
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>

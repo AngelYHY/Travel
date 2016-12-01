@@ -5,6 +5,26 @@
 
     <dimen name="activity_horizontal_margin_shop">0dp</dimen>
     <dimen name="activity_vertical_margin_shop">0dp</dimen>
-    <dimen name="bottom_tab_padding_drawable">2.0dip</dimen>
+    <dimen name="bottom_tab_padding_drawable">2dp</dimen>
+
+    <dimen name="normal_margin">16dp</dimen>
+
+    <!-- standard metrics -->
+    <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="spacing_micro">4dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_xsmall">10dp</dimen>
+    <dimen name="padding_xxsmall">14dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="padding_normal1">32dp</dimen>
+
+    <!-- App Primary Text Sizes -->
+    <dimen name="app_text_size_xsmall">11sp</dimen>
+    <dimen name="app_text_size_small">12sp</dimen>
+    <dimen name="app_text_size_medium">14sp</dimen>
+    <dimen name="app_text_size_large">16sp</dimen>
     <dimen name="app_text_size_xlarge">18sp</dimen>
+    <dimen name="app_text_size_xxlarge">20sp</dimen>
+
+    <dimen name="app_img_siez_medium">48dp</dimen>
 </resources>

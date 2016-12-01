@@ -12,13 +12,18 @@ import java.util.List;
  */
 public class MyFragmentPageAdapter extends FragmentPagerAdapter {
 
-    List<Fragment> fragmentList;
-    List<String> titles;
+    private List<Fragment> fragmentList;
+    private List<String> titles;
 
     public MyFragmentPageAdapter(FragmentManager fm, List<Fragment> fragmentList, List<String> titles) {
         super(fm);
         this.fragmentList = fragmentList;
         this.titles = titles;
+    }
+
+    public MyFragmentPageAdapter(FragmentManager fm, List<Fragment> fragmentList) {
+        super(fm);
+        this.fragmentList = fragmentList;
     }
 
     @Override

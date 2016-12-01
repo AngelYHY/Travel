@@ -78,7 +78,7 @@ public class LoginActivity extends BaseActivity implements ILoginView {
 
     @Override
     public void login() {
-        readyGo(MainActivity.class);
+        readyGoThenKill(MainActivity.class);
     }
 
     @OnClick({R.id.dcheckBox2, R.id.dcheckBox, R.id.btn_login, R.id.btn_wangjimima, btn_zhuce})
