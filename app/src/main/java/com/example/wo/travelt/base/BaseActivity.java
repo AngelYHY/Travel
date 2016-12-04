@@ -43,7 +43,7 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements IVie
             toolbar.setTitle("");
             setSupportActionBar(toolbar);
             getSupportActionBar().setHomeButtonEnabled(true);
-            getActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
 

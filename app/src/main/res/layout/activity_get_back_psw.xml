@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <include layout="@layout/head"/>
+
+    <LinearLayout
+        style="@style/normal_linear_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/phone"
+            android:text="手机号:"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_phone_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:background="@drawable/bg_round"
+            android:hint="请输入手机号"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space style="@style/line_15"/>
+
+    <LinearLayout
+        style="@style/normal_linear_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/identify_code"
+            android:text="验证码:"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:layout_weight="5"
+            android:background="@drawable/bg_round"
+            android:hint="请输入验证码"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="3"
+            android:background="@drawable/bg_round"
+            android:text="获取验证码"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space style="@style/line_15"/>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/bg_blue_blue"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="19dp"/>
+
+</LinearLayout>

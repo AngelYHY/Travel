@@ -5,5 +5,5 @@ package com.example.wo.travelt.presenter;
  */
 
 public interface ILoginPresenter {
-    void login(String name, String psw);
+    void login(String name, String psw, boolean isRemember, boolean isAutoLogin);
 }

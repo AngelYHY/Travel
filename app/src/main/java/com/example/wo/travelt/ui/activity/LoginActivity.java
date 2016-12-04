@@ -1,12 +1,9 @@
 package com.example.wo.travelt.ui.activity;
 
 import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.wo.travelt.R;
@@ -19,7 +16,7 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-import static com.example.wo.travelt.R.id.btn_zhuce;
+import static com.example.wo.travelt.R.id.tv_register;
 
 /**
  * Created by freestar on 2016/11/2.
@@ -29,38 +26,29 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     @Inject
     LoginPresenterImpl loginPresenter;
 
-    @Bind(R.id.login_back)
-    ImageView loginBack;
-    @Bind(R.id.iv_login_logo)
-    ImageView ivLoginLogo;
-    @Bind(R.id.iv_login_name)
-    ImageView ivLoginName;
-    @Bind(R.id.tv_login_name)
-    TextView tvLoginName;
+    @Bind(R.id.title)
+    TextView mTitle;
     @Bind(R.id.et_name)
-    EditText etName;
-    @Bind(R.id.iv_login_password)
-    ImageView ivLoginPassword;
-    @Bind(R.id.tv_login_password)
-    TextView tvLoginPassword;
+    EditText mEtName;
     @Bind(R.id.et_psw)
-    EditText etPsw;
-    @Bind(R.id.dcheckBox2)
-    CheckBox dcheckBox2;
-    @Bind(R.id.dcheckBox)
-    CheckBox dcheckBox;
+    EditText mEtPsw;
+    @Bind(R.id.check_remember)
+    CheckBox mCheckRemember;
+    @Bind(R.id.check_auto)
+    CheckBox mCheckAuto;
     @Bind(R.id.btn_login)
-    Button btnlogin;
-    @Bind(R.id.btn_wangjimima)
-    Button btnWangjimima;
-    @Bind(btn_zhuce)
-    Button btnZhuce;
-    ScaleAnimation scale;
+    Button mBtnLogin;
+    @Bind(R.id.tv_forget_psw)
+    TextView mTvForgetPsw;
+    @Bind(tv_register)
+    TextView mTvRegister;
+
+//    private ScaleAnimation mScale;
 
     @Override
     protected void initView() {
-        scale = (ScaleAnimation) AnimationUtils.loadAnimation(this, R.anim.scale);
-
+//        mScale = (ScaleAnimation) AnimationUtils.loadAnimation(this, scale);
+        mTitle.setText("账户登录");
         loginPresenter.attachView(this);
     }
 
@@ -81,24 +69,21 @@ public class LoginActivity extends BaseActivity implements ILoginView {
         readyGoThenKill(MainActivity.class);
     }
 
-    @OnClick({R.id.dcheckBox2, R.id.dcheckBox, R.id.btn_login, R.id.btn_wangjimima, btn_zhuce})
+    @OnClick({R.id.btn_login, R.id.tv_forget_psw, R.id.tv_register})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.dcheckBox2:
-                break;
-            case R.id.dcheckBox:
-                break;
             case R.id.btn_login:
-                loginPresenter.login(etName.getText().toString(), etPsw.getText().toString());
+                loginPresenter.login(mEtName.getText().toString(), mEtPsw.getText().toString(), mCheckRemember.isChecked(), mCheckAuto.isChecked());
                 break;
-            case R.id.btn_wangjimima:
-                btnWangjimima.startAnimation(scale);
-                readyGo(ZhaomimaActivity.class);
+            case R.id.tv_forget_psw:
+//                mTvForgetPsw.startAnimation(mScale);
+                readyGo(GetBackPSWActivity.class);
                 break;
-            case btn_zhuce:
-                btnZhuce.startAnimation(scale);
-                readyGo(ShoujizhuceActivity.class);
+            case tv_register:
+//                mTvRegister.startAnimation(mScale);
+                readyGo(PhoneRegisterActivity.class);
                 break;
         }
     }
+
 }

@@ -40,7 +40,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_centerHorizontal="true"
-            android:src="@drawable/lvchenglogin" />
+            android:src="@drawable/logo_big" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_toRightOf="@id/tv_register_name"
-                android:background="@drawable/login_edittext_color"
+                android:background="@drawable/bg_round"
                 android:padding="10dp"
                 android:textSize="16sp" />
         </RelativeLayout>
@@ -110,7 +110,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/mima" />
+                android:src="@mipmap/psw" />
 
             <TextView
                 android:id="@+id/tv_register_mima"
@@ -127,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_toRightOf="@id/tv_register_mima"
-                android:background="@drawable/login_edittext_color"
+                android:background="@drawable/bg_round"
                 android:hint="请输入新密码"
                 android:padding="10dp"
                 android:password="true"
@@ -151,7 +151,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_centerVertical="true"
-                android:src="@mipmap/querenmima" />
+                android:src="@mipmap/confirm_psw" />
 
             <TextView
                 android:id="@+id/tv_register_qmima"
@@ -168,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="2dp"
                 android:layout_toRightOf="@id/tv_register_qmima"
-                android:background="@drawable/login_edittext_color"
+                android:background="@drawable/bg_round"
                 android:hint="再次输入密码"
                 android:padding="10dp"
                 android:password="true"
@@ -188,7 +188,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:background="@drawable/btn_search_bg"
+            android:background="@drawable/bg_blue_blue"
             android:onClick="querenxiugai"
             android:text="注册"
             android:textColor="#ffffff"

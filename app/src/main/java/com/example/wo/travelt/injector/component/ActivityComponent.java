@@ -6,7 +6,9 @@ import android.content.Context;
 import com.example.wo.travelt.injector.ContextLife;
 import com.example.wo.travelt.injector.PerActivity;
 import com.example.wo.travelt.injector.module.ActivityModule;
+import com.example.wo.travelt.ui.activity.GetBackPSWActivity;
 import com.example.wo.travelt.ui.activity.LoginActivity;
+import com.example.wo.travelt.ui.activity.RegisterActivity;
 
 import dagger.Component;
 
@@ -25,5 +27,10 @@ public interface ActivityComponent {
     @ContextLife("Activity")
     Context getActivityContext();
 
-    void inject(LoginActivity loginActivity);
+    void inject(LoginActivity activity);
+
+    void inject(GetBackPSWActivity activity);
+
+    void inject(RegisterActivity activity);
+
 }

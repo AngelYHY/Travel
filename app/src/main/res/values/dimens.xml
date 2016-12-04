@@ -8,6 +8,8 @@
     <dimen name="bottom_tab_padding_drawable">2dp</dimen>
 
     <dimen name="normal_margin">16dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+
 
     <!-- standard metrics -->
     <dimen name="spacing_normal">8dp</dimen>

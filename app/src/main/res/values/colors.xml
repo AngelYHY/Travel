@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#52ADE7</color>
-    <color name="colorPrimaryDark">#099FDE</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#468fee</color>
+    <color name="colorPrimaryDark">#468fee</color>
+    <color name="colorAccent">#468fee</color>
+
     <!--备份系统颜色由上到下：#3F51B5  #303F9F  #FF4081-->
     <color name="gray">#e6e6e6</color>
-    <color name="darkgray">#cccc</color>
+    <color name="dark_gray">#cccc</color>
     <color name="more_gray">#9A9A9A</color>
     <color name="color_white">#ffffff</color>
     <color name="color_white_apha">#80ffffff</color>
-    <color name="btn_press_color">#5677fc</color>
-    <color name="btn_pressed_color">#3ca0ec</color>
+    <color name="btn_pressed_color">#5677fc</color>
+    <color name="btn_press_color">#3ca0ec</color>
     <color name="green">#8cbb19</color>
     <color name="green_light">#11cd6e</color>
 

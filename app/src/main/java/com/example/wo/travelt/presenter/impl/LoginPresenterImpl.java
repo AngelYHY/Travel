@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.android.library.base.BasePresenter;
+import com.android.library.util.PreferencesUtils;
 import com.android.library.util.StringUtils;
+import com.example.wo.travelt.constant.Preferences;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.injector.ContextLife;
 import com.example.wo.travelt.presenter.ILoginPresenter;
@@ -22,19 +24,20 @@ import rx.Subscriber;
 
 public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILoginPresenter {
 
-    private final RetrofitService service;
-    private final Context context;
-    private final LoginActivity activity;
+
+    private final RetrofitService mService;
+    private final Context mContext;
+    private final LoginActivity mActivity;
 
     @Inject
     public LoginPresenterImpl(RetrofitService service, @ContextLife("Application") Context context, Activity activity) {
-        this.service = service;
-        this.context = context;
-        this.activity = (LoginActivity) activity;
+        mService = service;
+        mContext = context;
+        mActivity = (LoginActivity) activity;
     }
 
     @Override
-    public void login(final String name, final String psw) {
+    public void login(final String name, final String psw, final boolean isRemember, boolean isAutoLogin) {
         //判断密码不为空
         if (StringUtils.isEmpty(name)) {
             mView.showMsg("用户名不能为空");
@@ -44,9 +47,9 @@ public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILo
             return;
         }
         mView.showDialog("登陆中，请稍后~~");
-        service.login(name, psw)
+        mService.login(name, psw)
                 .compose(mView.<String>applySchedulers())
-                .compose(activity.<String>bindUntilEvent(ActivityEvent.DESTROY))
+                .compose(mActivity.<String>bindUntilEvent(ActivityEvent.DESTROY))
                 .subscribe(new Subscriber<String>() {
                     @Override
                     public void onCompleted() {
@@ -56,12 +59,22 @@ public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILo
                     @Override
                     public void onError(Throwable e) {
                         mView.showException(e);
+                        mView.hideDialog();
                     }
 
                     @Override
                     public void onNext(String s) {
                         if (s.equals("yes")) {
                             mView.login();
+                            if (isRemember) {
+                                PreferencesUtils.putString(mContext, Preferences.NAME, name);
+                                PreferencesUtils.putString(mContext, Preferences.PSW, psw);
+                                PreferencesUtils.putBoolean(mContext, Preferences.LOGIN_CHK_STATE, true);
+                            } else {
+                                PreferencesUtils.putString(mContext, Preferences.PSW, "");
+                                PreferencesUtils.putBoolean(mContext, Preferences.LOGIN_CHK_STATE, false);
+                                PreferencesUtils.putString(mContext, Preferences.NAME, name);
+                            }
                         } else {
                             mView.showMsg("密码错误");
                         }
@@ -69,4 +82,5 @@ public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILo
                 });
 
     }
+
 }

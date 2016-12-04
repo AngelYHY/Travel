@@ -6,5 +6,5 @@ import com.android.library.base.IView;
  * Created by freestar on 2016/11/4.
  */
 
-public interface IZhuceView extends IView {
+public interface IGetBackPSWView extends IView {
 }

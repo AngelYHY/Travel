@@ -1,219 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#EEEEEE">
+    <include layout="@layout/toolbar"/>
 
-        <ImageView
-            android:id="@+id/login_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:padding="10dp"
-            android:src="@drawable/shopback" />
+    <include layout="@layout/head"/>
+
+    <LinearLayout
+        style="@style/normal_linear_layout">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/login_back"
-            android:text="账户登录"
-            android:textColor="#7F7F7F"
-            android:textSize="18dp" />
+            android:drawableLeft="@mipmap/name"
+            android:text="账号:"
+            android:textSize="15dp"/>
 
-    </RelativeLayout>
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/et_normal"
+            android:hint="用户名"/>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space style="@style/line_15"/>
+
+    <LinearLayout
+        style="@style/normal_linear_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/psw"
+            android:text="密码:"
+            android:textSize="15dp"/>
+
+        <EditText
+            android:id="@+id/et_psw"
+            style="@style/et_normal"
+            android:hint="密码"
+            />
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space style="@style/line_8"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff">
+        android:layout_marginLeft="@dimen/dp_22"
+        android:layout_marginRight="@dimen/dp_22">
 
-        <ImageView
-            android:id="@+id/iv_login_logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_centerHorizontal="true"
-            android:src="@drawable/lvchenglogin" />
+        <CheckBox
+            android:id="@+id/check_remember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记住密码"
+            android:textSize="13dp"/>
+
+        <CheckBox
+            android:id="@+id/check_auto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="自动登录"
+            android:textSize="13dp"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.Space style="@style/line_8"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/btn_normal"
+        android:text="登录"/>
+
+    <android.support.v4.widget.Space style="@style/line_5"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/normal_margin"
+        android:layout_marginRight="@dimen/normal_margin"
+        android:layout_marginTop="@dimen/dp_10">
 
         <TextView
+            android:id="@+id/tv_forget_psw"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/iv_login_logo"
-            android:layout_centerHorizontal="true"
-            android:text="旅城 "
-            android:textColor="#42B9B5"
-            android:textSize="20dp"
-            android:textStyle="italic"
-            android:typeface="sans" />
+            android:text="忘记密码?"
+            android:textColor="@color/btn_press_color"/>
 
-    </RelativeLayout>
-
-    <View style="@style/line_30" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
+        <TextView
+            android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-            <ImageView
-                android:id="@+id/iv_login_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@mipmap/name" />
-
-            <TextView
-                android:id="@+id/tv_login_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/iv_login_name"
-                android:text="账号:"
-                android:textSize="15dp" />
-
-            <EditText
-                android:id="@+id/et_name"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_toRightOf="@id/tv_login_name"
-                android:background="@drawable/login_edittext_color"
-                android:hint="用户名"
-                android:padding="10dp"
-                android:textSize="16sp" />
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <View style="@style/line_15" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-            <ImageView
-                android:id="@+id/iv_login_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:src="@mipmap/mima" />
-
-            <TextView
-                android:id="@+id/tv_login_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/iv_login_password"
-                android:text="密码:"
-                android:textSize="15dp" />
-
-            <EditText
-                android:id="@+id/et_psw"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="2dp"
-                android:layout_toRightOf="@id/tv_login_password"
-                android:background="@drawable/login_edittext_color"
-                android:hint="密码"
-                android:padding="10dp"
-                android:password="true"
-                android:textSize="16sp" />
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <View style="@style/line_8" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-            <CheckBox
-                android:id="@+id/dcheckBox2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="记住密码"
-                android:textSize="13dp" />
-
-            <CheckBox
-                android:id="@+id/dcheckBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp"
-                android:layout_toRightOf="@id/dcheckBox2"
-                android:text="自动登录"
-                android:textSize="13dp" />
-
-        </RelativeLayout>
+            android:layout_alignParentRight="true"
+            android:text="新用户注册"
+            android:textColor="@color/btn_press_color"/>
 
     </RelativeLayout>
 
-    <View style="@style/line_8" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_marginRight="60dp"
-            android:background="@drawable/btn_search_bg"
-            android:text="登录"
-            android:textColor="#ffffff"
-            android:textSize="19dp" />
-
-    </RelativeLayout>
-
-    <View style="@style/line_5" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true">
-
-            <Button
-                android:id="@+id/btn_wangjimima"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:text="忘记密码?"
-                android:textColor="#3ca0ec" />
-
-            <Button
-                android:id="@+id/btn_zhuce"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="150dp"
-                android:layout_toRightOf="@id/btn_wangjimima"
-                android:background="@null"
-                android:text="新用户注册"
-                android:textColor="#3ca0ec" />
-        </RelativeLayout>
-    </RelativeLayout>
 </LinearLayout>

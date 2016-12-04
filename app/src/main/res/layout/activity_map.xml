@@ -22,7 +22,7 @@
             android:layout_gravity="right|bottom"
             android:layout_marginRight="100dp"
             android:layout_marginBottom="35dp"
-            fab:fab_colorNormal="@color/darkgray"
+            fab:fab_colorNormal="@color/dark_gray"
             android:onClick="locateMyPosition"
             fab:fab_colorPressed="@color/more_gray"
             fab:fab_icon="@mipmap/nav_turn_via_1"

@@ -33,7 +33,7 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="5dp"
             fab:fab_colorNormal="@color/color_white"
-            fab:fab_colorPressed="@color/darkgray"
+            fab:fab_colorPressed="@color/dark_gray"
             fab:fab_title="看全图"
             fab:fab_icon="@mipmap/full_phone_blue_32"
             fab:fab_size="mini"/>
@@ -46,7 +46,7 @@
             android:layout_marginBottom="5dp"
             fab:fab_colorNormal="@color/color_white"
             android:onClick="locateMyPosition"
-            fab:fab_colorPressed="@color/darkgray"
+            fab:fab_colorPressed="@color/dark_gray"
             fab:fab_icon="@mipmap/nav_turn_via_1"
             fab:fab_size="mini"/>
     </FrameLayout>
@@ -59,7 +59,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"
-        android:background="@color/darkgray"/>
+        android:background="@color/dark_gray"/>
     <RelativeLayout
         android:layout_below="@id/framelayout_ditu"
         android:layout_width="match_parent"
@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_margin="10dp"
-            android:background="@color/darkgray"/>
+            android:background="@color/dark_gray"/>
         <TextView
             android:id="@+id/tv_timeflag"
             android:layout_below="@id/view"

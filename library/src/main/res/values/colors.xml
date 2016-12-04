@@ -40,8 +40,6 @@
     <color name="alpha_85_white">#D9FFFFFF</color>
     <color name="alpha_90_white">#E6FFFFFF</color>
     <color name="alpha_95_white">#F2FFFFFF</color>
-    <color name="white">#FFFFFFFF</color>
-
     <color name="alpha_05_black">#0D000000</color>
     <color name="alpha_10_black">#1A000000</color>
     <color name="alpha_15_black">#26000000</color>

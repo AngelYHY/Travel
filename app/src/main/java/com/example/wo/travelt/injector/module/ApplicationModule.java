@@ -56,7 +56,7 @@ public class ApplicationModule {
     @Provides
     @Singleton
     String provideUserID() {
-        return PreferencesUtils.getString(application, Preferences.USERID);
+        return PreferencesUtils.getString(application, Preferences.NAME);
     }
 
 }
