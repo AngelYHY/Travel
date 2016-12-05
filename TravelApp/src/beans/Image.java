@@ -1,0 +1,52 @@
+package beans;
+
+import java.io.Serializable;
+
+/**
+ * Created by Pan_ on 2015/2/3.
+ */
+public class Image implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String url;
+    private int width;
+    private int height;
+
+    public Image(String url, int width, int height) {
+        this.url = url;
+        this.width = width;
+        this.height = height;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+
+        return "image---->>url="+url+"width="+width+"height"+height;
+    }
+}
