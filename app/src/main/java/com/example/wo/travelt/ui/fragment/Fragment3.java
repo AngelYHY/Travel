@@ -130,10 +130,10 @@ public class Fragment3 extends BaseFragment implements RadioGroup.OnCheckedChang
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.activity_main_shop;
+        return R.layout.fragment_main_shop;
     }
 
-    public DrawerLayout getDrawerlayout() {
+    public DrawerLayout getDrawerLayout() {
         return mDrawerLayoutCity;
     }
 

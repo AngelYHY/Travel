@@ -42,6 +42,7 @@
             android:id="@+id/et_psw"
             style="@style/et_normal"
             android:hint="密码"
+            android:inputType="textPassword"
             />
 
     </LinearLayout>

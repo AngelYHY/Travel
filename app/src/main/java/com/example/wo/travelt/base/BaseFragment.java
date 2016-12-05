@@ -258,7 +258,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
     }
 
     @Override
-    public void onComplete() {
+    public void showLoadMoreFail() {
 
     }
 

@@ -7,4 +7,5 @@ import com.android.library.base.IView;
  */
 
 public interface IRegisterView extends IView {
+    void go(boolean flag);
 }

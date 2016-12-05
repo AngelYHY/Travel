@@ -46,7 +46,7 @@ public interface IView {
 
     void hideDialog();
 
-    void onComplete();
+    void showLoadMoreFail();
 
     /*<T> Observable bindToLifecycle(Observable<T> observable);*/
 

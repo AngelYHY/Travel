@@ -75,12 +75,13 @@ public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILo
                                 PreferencesUtils.putBoolean(mContext, Preferences.LOGIN_CHK_STATE, false);
                                 PreferencesUtils.putString(mContext, Preferences.NAME, name);
                             }
+                        } else if (s.equals("帐号不正确")) {
+                            mView.showMsg(s);
                         } else {
                             mView.showMsg("密码错误");
                         }
                     }
                 });
-
     }
 
 }

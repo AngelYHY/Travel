@@ -45,7 +45,7 @@ public class ApplicationModule {
         //home
 //        String baseUrl = "http://192.168.1.199:8080/TravelApp/";
         //other
-        String baseUrl = "http://192.168.1.103:8080/TravelApp/";
+        String baseUrl = "http://192.168.1.102:8080/TravelApp/";
         Retrofit retrofit = new Retrofit.Builder()
                 .client(builder.build())
                 .baseUrl(baseUrl)

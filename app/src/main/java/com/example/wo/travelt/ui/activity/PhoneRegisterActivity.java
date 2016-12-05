@@ -50,14 +50,14 @@ public class PhoneRegisterActivity extends BaseActivity {
                     // 验证码验证成功
                     showMsg("验证码验证成功");
                     Bundle bundle = new Bundle();
-                    bundle.putString("phoneNum", mEtPhoneNum.toString());
+                    bundle.putString("phoneNum", mEtPhoneNum.getText().toString());
                     readyGo(RegisterActivity.class, bundle);
                 } else if (event == SMSSDK.EVENT_GET_VERIFICATION_CODE) {
                     showMsg("验证码已经发送");
                 }
             } else {
                 hideDialog();
-                showMsg("验证失败");
+                showMsg("验证失败" + data.toString());
                 ((Throwable) data).printStackTrace();
             }
         }
@@ -120,7 +120,7 @@ public class PhoneRegisterActivity extends BaseActivity {
                 break;
             case R.id.btn_register:
                 if (PhoneUtil.judgePhoneNums(num)) {
-                    SMSSDK.submitVerificationCode("86", num, mEtCode.toString());
+                    SMSSDK.submitVerificationCode("86", num, mEtCode.getText().toString());
                 } else {
                     showMsg("手机号格式不正确");
                 }
@@ -137,6 +137,6 @@ public class PhoneRegisterActivity extends BaseActivity {
                     public Integer call(Long aLong) {
                         return 30 - aLong.intValue();
                     }
-                }).take(30);
+                }).take(30 + 1);
     }
 }

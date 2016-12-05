@@ -14,10 +14,12 @@ import com.example.wo.travelt.base.BaseActivity;
 import com.example.wo.travelt.ui.fragment.Fragment1;
 import com.example.wo.travelt.ui.fragment.Fragment2;
 import com.example.wo.travelt.ui.fragment.Fragment3;
+import com.example.wo.travelt.ui.fragment.Fragment4;
 import com.example.wo.travelt.view.IMainView;
 import com.example.wo.travelt.widget.CustomViewPager;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
@@ -33,32 +35,29 @@ public class MainActivity extends BaseActivity implements IMainView {
     @Bind(R.id.custom_viewPage)
     CustomViewPager mViewPager;
     private List<Fragment> mFragments;
-    private ArrayList<String> mTitles;
     private Fragment3 mFragment3;
-    private String mLocationcity;
+    private String mLocalCity;
 
     @Override
     protected void initView() {
         initVP();
     }
 
-    public String getLocationcity() {
-        return mLocationcity;
+    public String getLocalCity() {
+        return mLocalCity;
     }
 
     private void initVP() {
         mFragment3 = new Fragment3();
         mFragments = new ArrayList<>();
-        mTitles = new ArrayList<>();
+        String[] titles = {"首页", "发布", "购物", "我的"};
         mViewPager.setOffscreenPageLimit(3);
         mFragments.add(new Fragment1());
         mFragments.add(new Fragment2());
         mFragments.add(mFragment3);
-        mTitles.add("首页");
-        mTitles.add("发布");
-        mTitles.add("购物");
-        mTitles.add("我的");
-        MyFragmentPageAdapter mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), mFragments, mTitles);
+        mFragments.add(new Fragment4());
+
+        MyFragmentPageAdapter mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), mFragments, Arrays.asList(titles));
         mViewPager.setAdapter(mAdapter);
         //将TabLayout与ViewPager绑定起来
         mTabLayout.setupWithViewPager(mViewPager);
@@ -101,7 +100,7 @@ public class MainActivity extends BaseActivity implements IMainView {
 
     @Override
     public void updateCity(String city) {
-        mLocationcity = city;
+        mLocalCity = city;
 //        Log.i("MainActivity", "MainActivity: onCreate" + Locationcity);
         Intent intent = new Intent();
         intent.setAction("action.refreshcity");
@@ -117,9 +116,9 @@ public class MainActivity extends BaseActivity implements IMainView {
 
     @Override
     public void onBackPressed() {
-        if (mFragment3 != null && mFragment3.getDrawerlayout() != null) {
-            if (mFragment3.getDrawerlayout().isDrawerOpen(GravityCompat.START)) {
-                mFragment3.getDrawerlayout().closeDrawer(GravityCompat.START);
+        if (mFragment3 != null && mFragment3.getDrawerLayout() != null) {
+            if (mFragment3.getDrawerLayout().isDrawerOpen(GravityCompat.START)) {
+                mFragment3.getDrawerLayout().closeDrawer(GravityCompat.START);
             } else {
                 super.onBackPressed();
             }

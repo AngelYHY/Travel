@@ -7,6 +7,7 @@ import com.example.wo.travelt.injector.component.ApplicationComponent;
 import com.example.wo.travelt.injector.component.DaggerApplicationComponent;
 import com.example.wo.travelt.injector.module.ApplicationModule;
 import com.rey.material.app.ThemeManager;
+import com.squareup.leakcanary.LeakCanary;
 
 import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.GINGERBREAD;
@@ -38,6 +39,7 @@ public class MyApplication extends Application {
         component.injectApplication(this);
 
         enabledStrictMode();
+        LeakCanary.install(this);
     }
 
     private void enabledStrictMode() {

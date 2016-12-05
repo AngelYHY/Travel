@@ -6,7 +6,8 @@ import android.widget.TextView;
 
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.base.BaseActivity;
-import com.example.wo.travelt.presenter.impl.ZhucePresenterImpl;
+import com.example.wo.travelt.presenter.impl.RegisterPresenterImpl;
+import com.example.wo.travelt.view.IRegisterView;
 
 import javax.inject.Inject;
 
@@ -18,9 +19,9 @@ import butterknife.OnClick;
  * Created by freestar on 2016/11/4.
  */
 
-public class RegisterActivity extends BaseActivity {
+public class RegisterActivity extends BaseActivity implements IRegisterView {
     @Inject
-    ZhucePresenterImpl mPresenter;
+    RegisterPresenterImpl mPresenter;
 
     @Bind(R.id.title)
     TextView mTitle;
@@ -30,6 +31,7 @@ public class RegisterActivity extends BaseActivity {
     EditText mEtPsw;
     @Bind(R.id.et_confirm_psw)
     EditText mEtConfirmPsw;
+
     private String mPhoneNum;
 
     @Override
@@ -37,12 +39,12 @@ public class RegisterActivity extends BaseActivity {
         mTitle.setText("用户注册");
         Bundle bundle = getIntent().getExtras();
         mPhoneNum = bundle.getString("phoneNum");
-//        mPresenter.attachView(this);
+        mPresenter.attachView(this);
     }
 
     @Override
     protected int getContentViewLayoutID() {
-        return R.layout.activity_zhuce;
+        return R.layout.activity_register;
     }
 
     @Override
@@ -61,7 +63,15 @@ public class RegisterActivity extends BaseActivity {
 
     @OnClick(R.id.btn_register)
     public void onClick() {
-
+        mPresenter.register(mEtName.getText().toString(), mEtPsw.getText().toString(), mEtConfirmPsw.getText().toString(), mPhoneNum);
     }
 
+    @Override
+    public void go(boolean flag) {
+        if (flag) {
+            readyGo(MainActivity.class);
+        } else {
+            readyGo(PhoneRegisterActivity.class);
+        }
+    }
 }

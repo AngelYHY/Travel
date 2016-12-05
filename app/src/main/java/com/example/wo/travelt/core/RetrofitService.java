@@ -15,5 +15,9 @@ public interface RetrofitService {
     @POST("Login")
     Observable<String> login(@Field("name") String name, @Field("psw") String psw);
 
+    //登录
+    @FormUrlEncoded
+    @POST("Register")
+    Observable<String> register(@Field("name") String name, @Field("passwd") String psw, @Field("phone") String phone);
 
 }

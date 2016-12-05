@@ -39,14 +39,13 @@
             android:textSize="15dp"/>
 
         <EditText
-            android:id="@+id/et_psw"
+            android:id="@+id/et_code"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dp_4"
             android:layout_weight="5"
             android:background="@drawable/bg_round"
             android:hint="请输入验证码"
-            android:inputType="textPassword"
             android:padding="10dp"
             android:textSize="16sp"/>
 
@@ -65,7 +64,7 @@
 
     <Button
         android:id="@+id/btn_register"
-        android:text="手机注册"
-        style="@style/btn_normal"/>
+        style="@style/btn_normal"
+        android:text="手机注册"/>
 
 </LinearLayout>

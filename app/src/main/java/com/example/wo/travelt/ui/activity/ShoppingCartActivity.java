@@ -2,7 +2,7 @@ package com.example.wo.travelt.ui.activity;
 
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.base.BaseActivity;
-import com.example.wo.travelt.base.ShowShoppingCart;
+import com.example.wo.travelt.bean.ShowShoppingCart;
 import com.example.wo.travelt.view.IShoppingCartView;
 
 import java.util.List;

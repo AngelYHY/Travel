@@ -24,7 +24,7 @@ import static com.example.wo.travelt.R.id.tv_register;
 
 public class LoginActivity extends BaseActivity implements ILoginView {
     @Inject
-    LoginPresenterImpl loginPresenter;
+    LoginPresenterImpl mPresenter;
 
     @Bind(R.id.title)
     TextView mTitle;
@@ -43,13 +43,10 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     @Bind(tv_register)
     TextView mTvRegister;
 
-//    private ScaleAnimation mScale;
-
     @Override
     protected void initView() {
-//        mScale = (ScaleAnimation) AnimationUtils.loadAnimation(this, scale);
         mTitle.setText("账户登录");
-        loginPresenter.attachView(this);
+        mPresenter.attachView(this);
     }
 
     @Override
@@ -61,7 +58,7 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     protected void initInjector() {
         super.initInjector();
         mActivityComponent.inject(this);
-        mIPresenter = loginPresenter;
+        mIPresenter = mPresenter;
     }
 
     @Override
@@ -73,14 +70,12 @@ public class LoginActivity extends BaseActivity implements ILoginView {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_login:
-                loginPresenter.login(mEtName.getText().toString(), mEtPsw.getText().toString(), mCheckRemember.isChecked(), mCheckAuto.isChecked());
+                mPresenter.login(mEtName.getText().toString(), mEtPsw.getText().toString(), mCheckRemember.isChecked(), mCheckAuto.isChecked());
                 break;
             case R.id.tv_forget_psw:
-//                mTvForgetPsw.startAnimation(mScale);
                 readyGo(GetBackPSWActivity.class);
                 break;
             case tv_register:
-//                mTvRegister.startAnimation(mScale);
                 readyGo(PhoneRegisterActivity.class);
                 break;
         }

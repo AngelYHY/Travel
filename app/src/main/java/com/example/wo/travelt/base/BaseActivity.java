@@ -175,7 +175,7 @@ public abstract class BaseActivity extends BaseAppCompatActivity implements IVie
     }
 
     @Override
-    public void onComplete() {
+    public void showLoadMoreFail() {
 
     }
 

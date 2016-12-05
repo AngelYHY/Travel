@@ -1,6 +1,5 @@
 package com.example.wo.travelt.ui.activity;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -13,7 +12,6 @@ import com.example.wo.travelt.view.IGetBackPSWView;
 import javax.inject.Inject;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -48,13 +46,6 @@ public class GetBackPSWActivity extends BaseActivity implements IGetBackPSWView 
     @Override
     protected int getContentViewLayoutID() {
         return R.layout.activity_get_back_psw;
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
     }
 
     @OnClick({R.id.btn_code, R.id.btn_confirm})

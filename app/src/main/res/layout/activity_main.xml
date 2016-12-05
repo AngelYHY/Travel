@@ -27,11 +27,5 @@
         android:layout_height="1dp"
         android:layout_below="@id/custom_viewPage"
         android:background="#a9b7b7"/>
-    <!-- <android.support.v4.view.ViewPager
-         android:id="@+id/viewPage"
-         android:layout_width="match_parent"
-         android:layout_height="0dp"
-         android:layout_weight="1">
 
-     </android.support.v4.view.ViewPager>-->
 </RelativeLayout>

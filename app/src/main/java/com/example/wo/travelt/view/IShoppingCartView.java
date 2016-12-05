@@ -1,7 +1,7 @@
 package com.example.wo.travelt.view;
 
 import com.android.library.base.IView;
-import com.example.wo.travelt.base.ShowShoppingCart;
+import com.example.wo.travelt.bean.ShowShoppingCart;
 
 import java.util.List;
 
