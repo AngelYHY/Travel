@@ -42,8 +42,10 @@ public class ApplicationModule {
     RetrofitService provideRetrofitService() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
         builder.connectTimeout(2, TimeUnit.SECONDS);
-
-        String baseUrl = "http://192.168.1.199:8080/TravelApp/";
+        //home
+//        String baseUrl = "http://192.168.1.199:8080/TravelApp/";
+        //other
+        String baseUrl = "http://192.168.1.103:8080/TravelApp/";
         Retrofit retrofit = new Retrofit.Builder()
                 .client(builder.build())
                 .baseUrl(baseUrl)
