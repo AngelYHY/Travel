@@ -2,7 +2,6 @@ package com.example.wo.travelt.ui.activity;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -11,10 +10,10 @@ import android.view.Menu;
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.adapter.MyFragmentPageAdapter;
 import com.example.wo.travelt.base.BaseActivity;
-import com.example.wo.travelt.ui.fragment.Fragment1;
-import com.example.wo.travelt.ui.fragment.Fragment2;
-import com.example.wo.travelt.ui.fragment.Fragment3;
 import com.example.wo.travelt.ui.fragment.Fragment4;
+import com.example.wo.travelt.ui.fragment.HomePageFragment;
+import com.example.wo.travelt.ui.fragment.PublishFragment;
+import com.example.wo.travelt.ui.fragment.ShoppingFragment;
 import com.example.wo.travelt.view.IMainView;
 import com.example.wo.travelt.widget.CustomViewPager;
 
@@ -23,7 +22,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by freestar on 2016/11/4.
@@ -35,7 +33,7 @@ public class MainActivity extends BaseActivity implements IMainView {
     @Bind(R.id.custom_viewPage)
     CustomViewPager mViewPager;
     private List<Fragment> mFragments;
-    private Fragment3 mFragment3;
+    private ShoppingFragment mShoppingFragment;
     private String mLocalCity;
 
     @Override
@@ -48,13 +46,13 @@ public class MainActivity extends BaseActivity implements IMainView {
     }
 
     private void initVP() {
-        mFragment3 = new Fragment3();
+        mShoppingFragment = new ShoppingFragment();
         mFragments = new ArrayList<>();
         String[] titles = {"首页", "发布", "购物", "我的"};
         mViewPager.setOffscreenPageLimit(3);
-        mFragments.add(new Fragment1());
-        mFragments.add(new Fragment2());
-        mFragments.add(mFragment3);
+        mFragments.add(new HomePageFragment());
+        mFragments.add(new PublishFragment());
+        mFragments.add(mShoppingFragment);
         mFragments.add(new Fragment4());
 
         MyFragmentPageAdapter mAdapter = new MyFragmentPageAdapter(getSupportFragmentManager(), mFragments, Arrays.asList(titles));
@@ -92,13 +90,6 @@ public class MainActivity extends BaseActivity implements IMainView {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
-
-    @Override
     public void updateCity(String city) {
         mLocalCity = city;
 //        Log.i("MainActivity", "MainActivity: onCreate" + Locationcity);
@@ -116,9 +107,9 @@ public class MainActivity extends BaseActivity implements IMainView {
 
     @Override
     public void onBackPressed() {
-        if (mFragment3 != null && mFragment3.getDrawerLayout() != null) {
-            if (mFragment3.getDrawerLayout().isDrawerOpen(GravityCompat.START)) {
-                mFragment3.getDrawerLayout().closeDrawer(GravityCompat.START);
+        if (mShoppingFragment != null && mShoppingFragment.getDrawerLayout() != null) {
+            if (mShoppingFragment.getDrawerLayout().isDrawerOpen(GravityCompat.START)) {
+                mShoppingFragment.getDrawerLayout().closeDrawer(GravityCompat.START);
             } else {
                 super.onBackPressed();
             }

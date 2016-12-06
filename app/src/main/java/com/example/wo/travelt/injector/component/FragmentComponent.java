@@ -6,9 +6,9 @@ import android.content.Context;
 import com.example.wo.travelt.injector.ContextLife;
 import com.example.wo.travelt.injector.PerFragment;
 import com.example.wo.travelt.injector.module.FragmentModule;
-import com.example.wo.travelt.ui.fragment.Fragment1;
-import com.example.wo.travelt.ui.fragment.Fragment2;
-import com.example.wo.travelt.ui.fragment.Fragment3;
+import com.example.wo.travelt.ui.fragment.HomePageFragment;
+import com.example.wo.travelt.ui.fragment.PublishFragment;
+import com.example.wo.travelt.ui.fragment.ShoppingFragment;
 import com.example.wo.travelt.ui.fragment.Fragment4;
 
 import dagger.Component;
@@ -27,12 +27,12 @@ public interface FragmentComponent {
 
     Activity getActivity();
 
-    void inject(Fragment1 fragment1);
+    void inject(HomePageFragment fragment);
 
-    void inject(Fragment2 fragment2);
+    void inject(PublishFragment fragment);
 
-    void inject(Fragment3 fragment3);
+    void inject(ShoppingFragment fragment);
 
-    void inject(Fragment4 fragment4);
+    void inject(Fragment4 fragment);
 
 }

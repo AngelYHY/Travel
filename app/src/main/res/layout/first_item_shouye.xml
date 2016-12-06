@@ -1,90 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:id="@+id/first_item_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical">
+    android:orientation="vertical">
+    <!--android:gravity="center_vertical"-->
 
     <com.youth.banner.Banner
-        android:id="@+id/firstpage_banner"
+        android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        app:default_image="@drawable/load1" />
+        app:default_image="@drawable/load1"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:orientation="horizontal">
+        <!--android:gravity="center_vertical"-->
+
         <TextView
             android:id="@+id/make_plan1"
-            android:layout_below="@id/firstpage_banner"
             android:layout_width="0dp"
-            android:layout_weight="2"
             android:layout_height="240dp"
-            android:layout_marginTop="5dp"
+            android:layout_below="@id/banner"
             android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="2"
             android:background="@drawable/shouye1"
-            android:text="设计你的行程计划"
-            android:paddingBottom="20dp"
             android:gravity="center"
-            android:textColor="#fff" />
+            android:paddingBottom="20dp"
+            android:text="设计你的行程计划"
+            android:textColor="@color/white"/>
+
         <LinearLayout
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="240dp"
             android:layout_marginTop="5dp"
+            android:layout_weight="1"
             android:orientation="vertical">
+
             <TextView
                 android:id="@+id/city_suzhou"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:text="苏州攻略"
-                android:textColor="@color/color_white"
-                android:paddingTop="20dp"
+                android:background="@drawable/first_suzhou_go"
                 android:gravity="top|center_horizontal"
-                android:background="@drawable/first_suzhou_go" />
+                android:paddingTop="20dp"
+                android:text="苏州攻略"
+                android:textColor="@color/color_white"/>
+
             <TextView
                 android:id="@+id/city_nanjing"
                 android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
                 android:layout_height="108dp"
-                android:text="攻略"
-                android:textColor="@color/color_white"
-                android:paddingTop="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/first_nanjing_go"
                 android:gravity="top|center_horizontal"
-                android:background="@drawable/first_nanjing_go" />
+                android:paddingTop="50dp"
+                android:text="攻略"
+                android:textColor="@color/color_white"/>
         </LinearLayout>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_vertical">
+        android:orientation="horizontal">
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:gravity="center_vertical"-->
+
         <View
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_margin="5dp"
+            android:layout_weight="3"
             android:background="@color/more_gray"/>
+
         <TextView
-            android:layout_weight="4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/first_fresh"
-            android:textSize="12sp"
+            android:layout_weight="4"
             android:gravity="center"
+            android:text="@string/first_fresh"
             android:textColor="@color/more_gray"
-            />
+            android:textSize="12sp"/>
+
         <View
-            android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_margin="5dp"
+            android:layout_weight="3"
             android:background="@color/more_gray"/>
+
     </LinearLayout>
 </LinearLayout>

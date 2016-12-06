@@ -3,6 +3,7 @@ package com.example.wo.travelt.base;
 import android.app.Application;
 import android.os.StrictMode;
 
+import com.antfortune.freeline.FreelineCore;
 import com.example.wo.travelt.injector.component.ApplicationComponent;
 import com.example.wo.travelt.injector.component.DaggerApplicationComponent;
 import com.example.wo.travelt.injector.module.ApplicationModule;
@@ -32,6 +33,7 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        FreelineCore.init(this);
         ThemeManager.init(this, 2, 0, null);
         component = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))

@@ -50,7 +50,7 @@ public class RecommServlet extends HttpServlet {
 			infoVos.add(new RecommInfoVo(user, glist, imgs, judgeUsers));
 		}
 		System.out.println("--------这是recommservlet"+infoVos.size());
-		System.out.println("这是图片infoVos.get(0).getImages().get(0)="+infoVos.get(0).getImages().get(0));
+//		System.out.println("这是图片infoVos.get(0).getImages().get(0)="+infoVos.get(0).getImages().get(0));
 		pWriter.write(new Gson().toJson(infoVos));
 		pWriter.close();
 	}

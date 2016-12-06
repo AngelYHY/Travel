@@ -12,6 +12,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+
 import utils.JDBCutil;
 
 public class Register extends HttpServlet {
@@ -46,6 +48,7 @@ public class Register extends HttpServlet {
 		PreparedStatement s = null;
 		ResultSet r = null;
 		c = JDBCutil.getConnection();
+		Gson gson = new Gson();
 
 		try {
 			s = c.prepareStatement(sql1);
@@ -62,7 +65,7 @@ public class Register extends HttpServlet {
 
 		try {
 			if (r.next()) {
-				out.print("no");
+				out.print(gson.toJson("no"));
 				return;
 			}
 
@@ -86,7 +89,7 @@ public class Register extends HttpServlet {
 
 		try {
 			if (r.next()) {
-				out.print("no1");
+				out.print(gson.toJson("no1"));
 				return;
 			}
 
@@ -102,7 +105,7 @@ public class Register extends HttpServlet {
 			s.setObject(3, phone);
 			s.setString(4, "http://img3.imgtn.bdimg.com/it/u=167648379,2590666920&fm=21&gp=0.jpg");
 			s.executeUpdate();
-			out.print("yes");
+			out.print(gson.toJson("yes"));
 
 			return;
 		} catch (Exception e) {
