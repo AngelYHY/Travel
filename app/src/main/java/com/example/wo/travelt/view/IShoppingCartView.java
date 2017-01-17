@@ -1,9 +1,10 @@
 package com.example.wo.travelt.view;
 
-import com.android.library.base.IView;
 import com.example.wo.travelt.bean.ShowShoppingCart;
 
 import java.util.List;
+
+import freestar.freelibrary.base.IView;
 
 /**
  * Created by Administrator on 2016/11/30 0030.

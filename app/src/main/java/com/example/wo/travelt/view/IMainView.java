@@ -1,11 +1,11 @@
 package com.example.wo.travelt.view;
 
-import com.android.library.base.IView;
+import freestar.freelibrary.base.IView;
 
 /**
  * Created by freestar on 2016/11/4.
  */
 
-public interface IMainView extends IView{
+public interface IMainView extends IView {
     public void updateCity(String city);
 }

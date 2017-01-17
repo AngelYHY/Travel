@@ -1,10 +1,8 @@
 package com.example.wo.travelt.injector.module;
 
-import android.app.Application;
 import android.content.Context;
 
-import com.android.library.util.PreferencesUtils;
-import com.example.wo.travelt.constant.Preferences;
+import com.example.wo.travelt.base.AppApplication;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.injector.ContextLife;
 
@@ -24,17 +22,18 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 @Module
 public class ApplicationModule {
-    Application application;
 
-    public ApplicationModule(Application application) {
-        this.application = application;
+    private final AppApplication mApplication;
+
+    public ApplicationModule(AppApplication application) {
+        mApplication = application;
     }
 
     @Provides
     @Singleton
     @ContextLife("Application")
     public Context provideContext() {
-        return application.getApplicationContext();
+        return mApplication.getApplicationContext();
     }
 
     @Provides
@@ -45,7 +44,7 @@ public class ApplicationModule {
         //home
 //        String baseUrl = "http://192.168.1.199:8080/TravelApp/";
         //other
-        String baseUrl = "http://192.168.1.102:8080/TravelApp/";
+        String baseUrl = "http://192.168.1.104:8080/TravelApp/";
         Retrofit retrofit = new Retrofit.Builder()
                 .client(builder.build())
                 .baseUrl(baseUrl)
@@ -53,12 +52,6 @@ public class ApplicationModule {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .build();
         return retrofit.create(RetrofitService.class);
-    }
-
-    @Provides
-    @Singleton
-    String provideUserID() {
-        return PreferencesUtils.getString(application, Preferences.NAME);
     }
 
 }

@@ -2,7 +2,6 @@ package com.example.wo.travelt.presenter.impl;
 
 import android.support.v4.app.Fragment;
 
-import com.android.library.base.BasePresenter;
 import com.example.wo.travelt.bean.SceneImgVo;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.presenter.IHomePagePresenter;
@@ -12,6 +11,7 @@ import com.trello.rxlifecycle.FragmentEvent;
 
 import javax.inject.Inject;
 
+import freestar.freelibrary.base.BasePresenter;
 import rx.Subscriber;
 
 /**

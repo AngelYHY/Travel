@@ -1,5 +1,6 @@
 package com.example.wo.travelt.ui.fragment;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
@@ -29,11 +30,10 @@ import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.adapter.CityAdapter;
 import com.example.wo.travelt.adapter.MyFragmentPageAdapter;
+import com.example.wo.travelt.base.AppApplication;
 import com.example.wo.travelt.base.BaseFragment;
-import com.example.wo.travelt.base.MyApplication;
 import com.example.wo.travelt.ui.activity.ShoppingCartActivity;
 import com.example.wo.travelt.widget.SuperRadioGroup;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 import java.util.Arrays;
 
@@ -149,7 +149,7 @@ public class ShoppingFragment extends BaseFragment implements RadioGroup.OnCheck
                 break;
             case R.id.shopping_car:
                 mShoppingCar.startAnimation(scale);
-                MyApplication myApplication = (MyApplication) getActivity().getApplication();
+                AppApplication myApplication = (AppApplication) getActivity().getApplication();
                 String accountName = myApplication.getAccountName();
 
                 if (accountName == null || accountName.equals("")) {
@@ -207,12 +207,13 @@ public class ShoppingFragment extends BaseFragment implements RadioGroup.OnCheck
         mRvCity.setLayoutManager(new LinearLayoutManager(mContext));
         mRvCity.addOnItemTouchListener(new OnItemClickListener() {
             @Override
-            public void SimpleOnItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
+            public void onSimpleItemClick(BaseQuickAdapter baseQuickAdapter, View view, int i) {
                 mDrawerLayoutCity.closeDrawer(mRvCity);
                 mLocationCity = mCity[i];
                 mShopCityName.setText(mLocationCity);
                 mHandler.sendEmptyMessage(1);
             }
+
         });
         mRvCity.setAdapter(new CityAdapter(R.layout.locationcity_item, Arrays.asList(mCity)));
 

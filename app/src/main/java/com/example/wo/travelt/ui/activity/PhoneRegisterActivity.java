@@ -8,9 +8,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.android.library.util.PhoneUtil;
 import com.example.wo.travelt.R;
 import com.example.wo.travelt.base.BaseActivity;
+import com.example.wo.travelt.widget.PhoneUtil;
 
 import java.util.concurrent.TimeUnit;
 

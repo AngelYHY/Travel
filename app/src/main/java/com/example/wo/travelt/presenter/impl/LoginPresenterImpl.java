@@ -3,9 +3,6 @@ package com.example.wo.travelt.presenter.impl;
 import android.app.Activity;
 import android.content.Context;
 
-import com.android.library.base.BasePresenter;
-import com.android.library.util.PreferencesUtils;
-import com.android.library.util.StringUtils;
 import com.example.wo.travelt.constant.Preferences;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.injector.ContextLife;
@@ -16,6 +13,9 @@ import com.trello.rxlifecycle.ActivityEvent;
 
 import javax.inject.Inject;
 
+import freestar.freelibrary.base.BasePresenter;
+import freestar.freelibrary.util.PreferencesUtils;
+import freestar.freelibrary.util.StringUtils;
 import rx.Subscriber;
 
 /**
@@ -58,7 +58,7 @@ public class LoginPresenterImpl extends BasePresenter<ILoginView> implements ILo
 
                     @Override
                     public void onError(Throwable e) {
-                        mView.showException(e);
+                        mView.showException(e,0);
                         mView.hideDialog();
                     }
 

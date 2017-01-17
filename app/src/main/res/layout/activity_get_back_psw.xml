@@ -76,7 +76,7 @@
         android:layout_marginRight="60dp"
         android:background="@drawable/bg_blue_blue"
         android:text="登录"
-        android:textColor="@color/white"
+        android:textColor="@android:color/white"
         android:textSize="19dp"/>
 
 </LinearLayout>

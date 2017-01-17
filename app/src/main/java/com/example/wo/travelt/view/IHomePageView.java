@@ -1,7 +1,8 @@
 package com.example.wo.travelt.view;
 
-import com.android.library.base.IView;
 import com.example.wo.travelt.bean.SceneImgVo;
+
+import freestar.freelibrary.base.IView;
 
 /**
  * Created by freestar on 2016/12/6.

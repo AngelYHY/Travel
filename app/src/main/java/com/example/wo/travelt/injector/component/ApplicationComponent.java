@@ -2,7 +2,7 @@ package com.example.wo.travelt.injector.component;
 
 import android.content.Context;
 
-import com.example.wo.travelt.base.MyApplication;
+import com.example.wo.travelt.base.AppApplication;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.injector.ContextLife;
 import com.example.wo.travelt.injector.module.ApplicationModule;
@@ -17,7 +17,8 @@ import dagger.Component;
 @Singleton
 @Component(modules = ApplicationModule.class)
 public interface ApplicationComponent {
-    MyApplication injectApplication(MyApplication application);
+
+    AppApplication injectApplication(AppApplication application);
 
     @ContextLife("Application")
     Context getContext();

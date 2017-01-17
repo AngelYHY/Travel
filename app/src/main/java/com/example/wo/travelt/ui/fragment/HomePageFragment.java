@@ -11,13 +11,13 @@ import com.example.wo.travelt.R;
 import com.example.wo.travelt.base.BaseFragment;
 import com.example.wo.travelt.bean.SceneImgVo;
 import com.example.wo.travelt.view.IHomePageView;
-import com.example.wo.travelt.widget.XRecyclerView;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
 
 import javax.inject.Inject;
 
 import butterknife.Bind;
+import freestar.freelibrary.widge.recyclerview.XRecyclerView;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 

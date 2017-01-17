@@ -2,8 +2,6 @@ package com.example.wo.travelt.presenter.impl;
 
 import android.app.Activity;
 
-import com.android.library.base.BasePresenter;
-import com.android.library.util.StringUtils;
 import com.example.wo.travelt.core.RetrofitService;
 import com.example.wo.travelt.presenter.IRegisterPresenter;
 import com.example.wo.travelt.ui.activity.RegisterActivity;
@@ -12,6 +10,8 @@ import com.trello.rxlifecycle.ActivityEvent;
 
 import javax.inject.Inject;
 
+import freestar.freelibrary.base.BasePresenter;
+import freestar.freelibrary.util.StringUtils;
 import rx.Subscriber;
 
 /**
@@ -58,7 +58,7 @@ public class RegisterPresenterImpl extends BasePresenter<IRegisterView> implemen
                     @Override
                     public void onError(Throwable e) {
                         mView.hide();
-                        mView.showException(e);
+                        mView.showException(e,0);
                     }
 
                     @Override

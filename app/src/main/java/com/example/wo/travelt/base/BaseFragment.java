@@ -7,20 +7,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.android.library.base.IPresenter;
-import com.android.library.base.IView;
-import com.android.library.base.baseAdapter.BaseAppCompatFragment;
-import com.android.library.util.netstatu.NetUtils;
 import com.example.wo.travelt.R;
-import com.example.wo.travelt.injector.component.DaggerFragmentComponent;
 import com.example.wo.travelt.injector.component.FragmentComponent;
 import com.example.wo.travelt.injector.module.FragmentModule;
-import com.example.wo.travelt.widget.EmptyView;
 import com.example.wo.travelt.widget.MyToast;
 
 import java.net.UnknownHostException;
 
 import butterknife.ButterKnife;
+import freestar.freelibrary.base.BaseAppCompatFragment;
+import freestar.freelibrary.base.IPresenter;
+import freestar.freelibrary.base.IView;
+import freestar.freelibrary.util.netstatu.NetUtils;
+import freestar.freelibrary.widge.EmptyView;
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
@@ -33,7 +32,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
     protected FragmentComponent mFragmentComponent;
     protected Toolbar mToolbar;
     protected EmptyView mEmptyView;
-    protected int page = 1;
+    public int page = 1;
     protected final static int PAGE_SIZE = 5;
 
     protected IPresenter mIPresenter;
@@ -42,7 +41,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
     protected void initInjector() {
         mFragmentComponent = DaggerFragmentComponent.builder()
                 .fragmentModule(new FragmentModule(this))
-                .applicationComponent(((MyApplication) getActivity().getApplication()).getApplicationComponent())
+                .applicationComponent(((AppApplication) getActivity().getApplication()).getComponent())
                 .build();
 
         mToolbar = ButterKnife.findById(getActivity(), R.id.common_toolbar);
@@ -86,7 +85,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
      *
      * @param clazz
      */
-    protected void readyGo(Class<?> clazz) {
+    public void readyGo(Class<?> clazz) {
         Intent intent = new Intent(getActivity(), clazz);
         startActivity(intent);
     }
@@ -97,7 +96,7 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
      * @param clazz
      * @param bundle
      */
-    protected void readyGo(Class<?> clazz, Bundle bundle) {
+    public void readyGo(Class<?> clazz, Bundle bundle) {
         Intent intent = new Intent(getActivity(), clazz);
         if (null != bundle) {
             intent.putExtras(bundle);
@@ -183,12 +182,21 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
     }
 
     @Override
-    public void showException(Throwable ex) {
+    public void showException(Throwable ex, int flag) {
         //toggleShowError(true, msg, null);
-        if (ex instanceof Exception) {
-            if (ex instanceof UnknownHostException) {
-                if (mEmptyView != null) {
-                    mEmptyView.showError("");
+        if (flag == 1) {
+            showFail(1);
+        } else if (flag == 2) {
+            showFail(2);
+        } else {
+            if (ex instanceof Exception) {
+                //无网络
+                if (ex instanceof UnknownHostException) {
+                    if (mEmptyView != null) {
+                        mEmptyView.showError("");
+                    }
+                } else {
+                    showMsg(mContext.getString(R.string.common_error_service));
                 }
             }
         }
@@ -252,13 +260,13 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
 
     @Override
     public void hideDialog() {
-        if (dialog == null) {
+        if (dialog != null) {
             dialog.dismiss();
         }
     }
 
     @Override
-    public void showLoadMoreFail() {
+    public void showFail(int flag) {
 
     }
 
@@ -270,6 +278,11 @@ public abstract class BaseFragment extends BaseAppCompatFragment implements IVie
         }
         /*RefWatcher refWatcher = ((AppApplication)getActivity().getApplication()).getRefWatcher(getActivity());
         refWatcher.watch(this);*/
+    }
+
+    @Override
+    public void pageAdd() {
+        page++;
     }
 
 }
